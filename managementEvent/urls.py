@@ -19,4 +19,9 @@ from django.urls import path
 
 urlpatterns = [
     #    path('admin/', admin.site.urls),
+	# 	TODO: Endpoint for the event list Menampilkan daftar semua event.
+	# 			•	POST /events/ - Menambahkan event baru.
+	# 			•	GET /events/<id>/ - Menampilkan detail event berdasarkan ID.
+	# 			•	PUT /events/<id>/ - Memperbarui data event.
+	# 			•	DELETE /events/<id>/ - Menghapus event.
 ]
