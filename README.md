@@ -6,6 +6,10 @@
 ```bash
 git clone https://github.com/alfrdzley/managementEvent.git
 ```
+2. Change the directory
+```bash
+cd managementEvent
+````
 2. Install Dependencies
 ```bash
 pip install -r requirements.txt
