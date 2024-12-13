@@ -15,13 +15,21 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 # from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from rest_framework import routers
+from event import views
+from django.contrib import admin
+
+routers = routers.DefaultRouter()
+routers.register(r'events', views.EventViewSet)
 
 urlpatterns = [
-    #    path('admin/', admin.site.urls),
+       path('admin/', admin.site.urls),
 	# 	TODO: Endpoint for the event list Menampilkan daftar semua event.
 	# 			•	POST /events/ - Menambahkan event baru.
 	# 			•	GET /events/<id>/ - Menampilkan detail event berdasarkan ID.
 	# 			•	PUT /events/<id>/ - Memperbarui data event.
 	# 			•	DELETE /events/<id>/ - Menghapus event.
+	path('api-auth/', include('rest_framework.urls')),
+	path('', include(routers.urls)),
 ]

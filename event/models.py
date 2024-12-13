@@ -1,6 +1,5 @@
 from django.db import models
 
-# Create your models here.
 
 # TODO: Event memiliki atribut berikut:
 # 		•	title (string, maksimal 100 karakter, tidak boleh kosong)
@@ -8,3 +7,7 @@ from django.db import models
 # 		•	date (tanggal dan waktu event, tidak boleh di masa lalu)
 # 		•	location (string, maksimal 150 karakter, tidak boleh kosong)
 # 		•	capacity (integer, menunjukkan jumlah peserta maksimal)
+
+class Event(models.Model):
+	title = models.CharField(max_length=100)
+	description = models.TextField()
